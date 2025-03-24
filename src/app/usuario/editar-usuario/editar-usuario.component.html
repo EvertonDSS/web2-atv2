@@ -1,0 +1,12 @@
+<h2>Editar Usuário</h2>
+
+<label for="id">ID do Usuário:</label>
+<input type="text" id="id" #idInput />
+
+<button (click)="buscarUsuario(idInput)">Buscar</button>
+
+<div *ngIf="usuario">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" #nomeInput [value]="usuario.nome" />
+  <button (click)="salvarUsuario(nomeInput)">Salvar</button>
+</div>
